@@ -5,5 +5,10 @@ class ApplicationResource < Bulk::Resource
   #
   # resources :tasks, :projects
 
+  delegate :current_user, :user_signed_in?, :to => :controller
+
+  def authenticate(action)
+    user_signed_in?
+  end
 end
 
