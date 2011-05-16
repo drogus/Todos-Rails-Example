@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
-gem 'bulk_api',   :path => "/Users/drogus/projekty/sproutcore/bulk_api"
-gem 'sproutcore', :path => "/Users/drogus/projekty/sproutcore/abbot", :require => nil
+gem 'bulk_api'
+gem 'sproutcore', :git => "git://github.com/sproutcore/abbot.git", :require => nil
 
 gem 'devise'
 gem 'cancan'
