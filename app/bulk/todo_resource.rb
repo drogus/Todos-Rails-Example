@@ -1,0 +1,2 @@
+class TodoResource < ApplicationResource
+end

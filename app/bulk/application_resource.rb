@@ -11,4 +11,3 @@ class ApplicationResource < Bulk::Resource
     user_signed_in?
   end
 end
-

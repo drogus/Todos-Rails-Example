@@ -1,6 +1,6 @@
 Todos::Application.routes.draw do
   get "/users/signed_in" => "user_session#signed_in"
-  
+
   devise_for :users
 
   mount Bulk::Sproutcore.new => "/_sproutcore"
