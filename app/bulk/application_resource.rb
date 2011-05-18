@@ -1,13 +1,22 @@
 class ApplicationResource < Bulk::Resource
-  # In production you should filter resources that you want to handle.
-  # To do so, just uncomment the next line and set resources that should be
-  # available in Bulk API:
-  #
-  # resources :tasks, :projects
+  resources :todos, :projects
 
   delegate :current_user, :user_signed_in?, :to => :controller
 
   def authenticate(action)
     user_signed_in?
+  end
+
+  def authorize_records(action, klass)
+    # we don't want to allow fetching any User records for now
+    # return true for all other types
+    klass != User
+  end
+
+  def authorize_record(action, record)
+    case record
+    when Project then record.owner == current_user
+    when Todo then record.project.owner == current_user
+    end
   end
 end
