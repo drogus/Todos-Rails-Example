@@ -1,5 +1,5 @@
-{{view Todos.TextField placeholder="Email" valueBinding="Todos.userSessionController.email"}}
-{{view Todos.TextField placeholder="Password" type="password" valueBinding="Todos.userSessionController.password"}}
+{{view Todos.SignInFieldView placeholder="Email" valueBinding="Todos.userSessionController.email"}}
+{{view Todos.SignInFieldView placeholder="Password" type="password" valueBinding="Todos.userSessionController.password"}}
 {{#view SC.Button classBinding="isActive" target="Todos.userSessionController" action="signIn"}}
   Sign in
 {{/view}}
