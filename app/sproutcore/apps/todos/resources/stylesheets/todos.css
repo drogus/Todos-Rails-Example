@@ -207,6 +207,8 @@ $padding: 10px;
     .sc-button {
       @include sc-button;
       font-size: 17px;
+      margin: 10px 15px 3px;
+      padding: 3px 15px;
     }
 
     .text-field-view {
@@ -214,8 +216,11 @@ $padding: 10px;
     }
 
     input[type='text'], input[type='password'] {
-      font-size: 15px;
+      font-size: 17px;
       height: 1.5em;
+      margin: 5px $padding;
+      padding: 3px;
+      width: 570px;
     }
 
     .window {
